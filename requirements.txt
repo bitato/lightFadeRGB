@@ -1,0 +1,3 @@
+hass-apps
+Notifier
+numpy
