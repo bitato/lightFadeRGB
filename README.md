@@ -1,2 +1,2 @@
 # lightFadeRGB
-AppDaemon application to fade HomeAssistant lights
+AppDaemon application to fade RGB lights
