@@ -1,4 +1,5 @@
-import appdaemon.plugins.hass.hassapi as hass
+#import appdaemon.plugins.hass.hassapi as hass
+from appdaemon.plugins.hass.hassapi import Hass
 import globals
 import datetime
 import time
@@ -25,7 +26,7 @@ import gradients
 # . support token to define entity instead of value
 
 
-class LightFaderRGB(hass.Hass):
+class LightFaderRGB(Hass):
     def initialize(self):
 
         self.timer_handle_list = []
