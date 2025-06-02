@@ -1,7 +1,4 @@
-import appdaemon.plugins.hass as hass
-#import appdaemon.plugins.hass.hassapi as hass
-#from appdaemon.plugins.hass.hassapi import Hass
-#from appdaemon.plugins.hass import Hass
+import appdaemon.plugins.hass.hassapi as hass
 import globals
 import datetime
 import time
