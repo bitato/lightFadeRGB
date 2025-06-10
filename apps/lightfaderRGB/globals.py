@@ -3,7 +3,7 @@ import random
 
 
 def get_arg(args, key):
-    key = args[key]
+    key = args.get(key)
     if type(key) is str and key.startswith("secret_"):
         if key in secrets.secret_dict:
             return secrets.secret_dict[key]

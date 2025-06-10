@@ -101,6 +101,7 @@ class LightFaderRGB(hass.Hass):
                 if self.color_period < 1:
                     self.color_period = 1
                 self.log("Color steps period: {} seconds".format(self.color_period))
+                self.log("Colors: {}".format(self.poly_colors))
             try:
                 self.timer = self.run_daily(self.trigger_alarm, event_time)
                 self.timer_handle_list.append(self.timer)
@@ -158,7 +159,7 @@ class LightFaderRGB(hass.Hass):
             or (self.start_brightness > self.end_brightness and brightness > self.end_brightness)
         ):
             try:
-                self.log("call {} with brightness: {} and color {}".format(self.light, brightness, new_color))
+                self.log("DEBUG", "call {} with brightness: {} and color {}".format(self.light, brightness, new_color))
                 self.call_service("light/turn_on", entity_id=self.light, rgb_color=new_color, brightness=brightness,)
             except:
                 self.log("TimeoutError calling {}".format(self.friendly_name(self.light)))
